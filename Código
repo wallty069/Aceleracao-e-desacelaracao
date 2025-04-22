@@ -1,0 +1,39 @@
+CREATE:
+
+speed = 0
+
+acelerador = 0.1
+
+max_speed = 3.7
+
+pre_gatilho = max_speed - acelerador // valor faltante para chegar no max_speed
+
+
+// Verificadores
+cor_atual = c_white
+cor_escolhida = noone
+
+// Cores possíveis 
+azul = c_blue
+verde = c_green
+laranja = c_orange
+
+STEP:
+
+if (speed > max_speed) {
+	speed = pre_gatilho + acelerador
+}
+
+if (!keyboard_check(vk_space)) { 
+// Se não estiver pressionando, desacelerar suavemente
+    speed -= 0.1;
+}
+
+// Evitar que a velocidade fique muito baixa e não pare completamente
+if (speed < 0.01) { 
+    speed = 0;
+}
+
+KEY DOWN - SPACE:
+
+speed += acelerador
