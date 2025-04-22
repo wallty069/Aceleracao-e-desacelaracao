@@ -1,3 +1,1 @@
-Em resumo, se a função if, no evento step, detectar que a velocidade chegou a 4, ela é subtraida de maneira que, para chegar a 4 novamente, é necessário somar com o valor
-faltante (armazenado na variável "aceleração"). Essa variável roda sempre que o player mantiver a tecla space pressionada. Ela tanto serve para dar velocidade,
-quanto para rodar o código que a limita, em uma espécie de cadeia perfeita. Quando a tecla space for "solta", a speed do objeto diminui de 0.1 em 0.1. Se esse speed chegar a 0, ele se manterá em 0, para evitar valores negativos.
+Em resumo, se a função if, no evento step, detectar que a velocidade (speed) chegou a 3.7, ela recebe o valor da variável pre_gatilho, que, ao mesmo tempo em que diminui em 0.1, aumenta em 0.1 também, fazendo com que o resultado se anule. Em resumo, a speed se manterá em 3.7, até que a tecla de space seja solta e o speed regresse, de 0.1 em 0.1, a 0.
